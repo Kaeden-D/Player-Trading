@@ -78,6 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3540d25a493800944b4831b579e00e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  value: 0
+  displayText: {fileID: 6954731161471021374}
 --- !u!1 &522856960029334829
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8960696656022601162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4046546208150657804}
+        m_TargetAssemblyTypeName: TradeItem, Assembly-CSharp
+        m_MethodName: OnAddItemButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8620929549762418974
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +606,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7579227875263475405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4046546208150657804}
+        m_TargetAssemblyTypeName: TradeItem, Assembly-CSharp
+        m_MethodName: OnRemoveItemButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8911713141983313244
 GameObject:
   m_ObjectHideFlags: 0
