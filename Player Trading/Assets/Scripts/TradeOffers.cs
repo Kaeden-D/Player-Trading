@@ -5,6 +5,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class TradeOfferInfo
+{
+    public List<string> playerIds;
+    public List<string> playerDisplayNames;
+    public List<string> tradeIds;
+}
+
 public class TradeOffers : MonoBehaviour
 {
 
@@ -20,7 +28,7 @@ public class TradeOffers : MonoBehaviour
     public void UpdateTradeOffers()
     {
         DisableAllTradeOfferButtons();
-
+        Debug.Log("test");
         ExecuteCloudScriptRequest getTradeOffersRequest = new ExecuteCloudScriptRequest
         {
             FunctionName = "GetTradeIDs"
@@ -96,12 +104,4 @@ public class TradeOffers : MonoBehaviour
 
     }
 
-}
-
-[System.Serializable]
-public class TradeOfferInfo
-{
-    public List<string> playerIds;
-    public List<string> playerDisplayNames;
-    public List<string> tradeIds;
 }

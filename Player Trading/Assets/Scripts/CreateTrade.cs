@@ -4,6 +4,7 @@ using PlayFab.ClientModels;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.PackageManager;
+using System.Linq;
 
 public class CreateTrade : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class CreateTrade : MonoBehaviour
                 ItemInstance i = tempInventory.Find(y => y.DisplayName == item.itemName);
                 if (i == null)
                 {
-                    Trade.instance.SetDisplayText("You don't have the offered items in your inventory.", false);
+                    Trade.instance.SetDisplayText("You don't have the offered items in your inventory.", true);
                     return;
                 }
                 else
@@ -41,7 +42,7 @@ public class CreateTrade : MonoBehaviour
 
         if (itemsToOffer.Count == 0)
         {
-            Trade.instance.SetDisplayText("You can't trade nothing.", false);
+            Trade.instance.SetDisplayText("You can't trade nothing.", true);
             return;
         }
 
@@ -73,7 +74,7 @@ public class CreateTrade : MonoBehaviour
 
         ExecuteCloudScriptRequest executeRequest = new ExecuteCloudScriptRequest
         {
-            FunctionName = "AddNewtradeOffer",
+            FunctionName = "AddNewTradeOffer",
             FunctionParameter = new { tradeID = tradeId }
         };
 

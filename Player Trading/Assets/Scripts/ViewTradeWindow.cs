@@ -65,7 +65,7 @@ public class ViewTradeWindow : MonoBehaviour
             ItemInstance item = tempInventory.Find(y => y.ItemId == curTradeOffer.RequestedCatalogItemIds[x]);
             if (item == null)
             {
-                Trade.instance.SetDisplayText("You don't have the requested items in your inventory.", false);
+                Trade.instance.SetDisplayText("You don't have the requested items in your inventory.", true);
                 return;
             }
             inventoryItemsToSend.Add(item.ItemInstanceId);

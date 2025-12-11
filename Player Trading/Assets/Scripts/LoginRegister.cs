@@ -59,9 +59,12 @@ public class LoginRegister : MonoBehaviour
             playFabId = result.PlayFabId;
             if (onLoggedIn != null)
                 onLoggedIn.Invoke();
+
+            //TradeOffers.instance.UpdateTradeOffers();
         },
         error => SetDisplayText(error.ErrorMessage, Color.red)
         );
+
 
     }
 
